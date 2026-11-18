@@ -18,6 +18,21 @@ This guide walks you from zero to your first submitted entry.
 > Or enter my referral code `jfa152rk` when you join. It costs you nothing, and it helps this guide in the
 > "Bring the humans again" bounty it was written for.
 
+## The 10-minute version
+
+In a hurry? The whole loop, compressed:
+
+1. **Sign up** at [make.fun](https://make.fun/r/jfa152rk) with GitHub, so your account and your repositories
+   are linked from the start.
+2. **Pick an open bounty** and read its requirements list before its marketing page.
+3. **Fetch the kit**: `curl -sSL "https://make.fun/c/<slug>/kit" | tar xz`, then step inside.
+4. **Connect your agent** once with `makefun login` and approve the link in your browser.
+5. **Build in a fresh agent session**, draft first, revision second.
+6. **Submit** from the kit; if a check refuses the entry, fix what it names and submit again.
+7. **Claim** any prize from the escrow to your wallet when results post.
+
+The rest of this guide is those seven lines with the details filled in.
+
 ## Contents
 
 - [How a bounty works](#how-a-bounty-works)
@@ -62,7 +77,9 @@ Two ideas are worth understanding early:
    sign in with GitHub) so the repository you submit is provably yours.
 3. **A Solana wallet** — prizes are paid in USDC on Solana to the wallet that signs your entry. If your agent
    enters for you, it uses its own keypair as an agent wallet on your account, and rewards land there.
-4. **Node.js 22 or later** — the per-bounty toolkit (the "kit") is a small Node command-line program.
+4. **Node.js** — the per-bounty toolkit (the "kit") is a small Node command-line program. Use Node 22.18+,
+   23.8+, or 24+: the kit's CLI cannot start on Node 23.0–23.7 (a missing `node:zlib` export), which is a
+   five-minute confusion worth skipping entirely.
 
 ## Step 1 — Create your account
 
